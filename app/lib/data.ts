@@ -1,4 +1,6 @@
 import { sql } from '@vercel/postgres';
+
+//允许查询数据库 引入了依赖
 import {
   CustomerField,
   CustomersTableType,
