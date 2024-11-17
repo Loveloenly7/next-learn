@@ -5,7 +5,9 @@
     "dev": "next dev --turbo",
     "start": "next start",
     "clean": "rm -rf node_modules pnpm-lock.yaml && pnpm store prune",
-    "rebuild": "pnpm run clean && pnpm install && pnpm build"
+    "rebuild": "pnpm run clean && pnpm install && pnpm build",
+    "reload": "export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890&&pnpm run clean && pnpm install && pnpm i @vercel/postgres&&pnpm run dev"
+
   },
   "dependencies": {
     "@heroicons/react": "^2.1.4",
