@@ -11,6 +11,9 @@ export default async function InvoicesTable({
   query: string;
   currentPage: number;
 }) {
+
+
+  //todo 传递给了发票。。于是前端就实现了查询
   const invoices = await fetchFilteredInvoices(query, currentPage);
 
   return (
@@ -47,6 +50,7 @@ export default async function InvoicesTable({
                     <p>{formatDateToLocal(invoice.date)}</p>
                   </div>
                   <div className="flex justify-end gap-2">
+                    {/*todo 更新和删除的按钮*/}
                     <UpdateInvoice id={invoice.id} />
                     <DeleteInvoice id={invoice.id} />
                   </div>

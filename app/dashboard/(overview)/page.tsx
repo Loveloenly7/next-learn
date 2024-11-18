@@ -2,6 +2,11 @@
 //     return <p>Dashboard Page</p>;
 //   }
 
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+    title: 'Dash',
+};
+
 import { Card } from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
@@ -50,6 +55,7 @@ export default async function Page() {
     totalPaidInvoices,
     totalPendingInvoices,
   } = await fetchCardData();
+
 
 
 
